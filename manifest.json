@@ -1,0 +1,19 @@
+{
+  "name": "JSON Pretty Viewer",
+  "version": "1.1",
+  "manifest_version": 3,
+  "description": "Open a dummy tab and display formatted JSON.",
+  "permissions": ["tabs", "contextMenus"],
+  "action": {
+    "default_title": "Open JSON Viewer"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["viewer.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
